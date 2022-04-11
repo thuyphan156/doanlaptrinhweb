@@ -1,0 +1,217 @@
+<html>
+<head>
+<style>
+		h2{
+			front-style:bold;
+			color: snow;
+			font-size:30px;
+		}
+		*{
+			font-family: Arial;
+			font-size: 12px;
+			
+		}
+			#header{
+	
+			width:100%;
+			height:50px;
+			background:#FBEAEB;
+			color:#FFF;
+			text-align:center;
+			margin-bottom:5px;
+	}
+		#header ul{
+			list-style:none;			
+			margin:0px ;
+			padding:0px ;
+
+		}
+		#header ul li{
+			list-style:none;
+			float:right;
+			
+		}
+		#header ul li a{
+			text-decoration:none;
+			display:block;
+			height:31px;
+			line-height:13px;
+			padding: 18px 50px 0px 50px;
+			border-right: 2px solid blue;
+		}
+		footer{
+			
+			background-color: snow;
+			color: blue;
+			min-height: 70px;
+			padding: 15px;
+			text-align: center;
+		}
+		.div{
+			
+			width:100%;
+			height: 200px;
+			text-shadow: 1px 1px 2px red, 1px 1px 10px #F5A9E1 ;
+			text-align: center;
+			background-image: url("anhnen2.jpg");
+			background-size: cover; 
+		}
+		
+		.menu{
+			width:100%;
+			height:60px;
+			background-color: #F5DA81;
+			text-align:center;
+		}
+		
+		.main{
+			margin:5px 5px;
+			padding:5px;
+			width:100%;
+			height:1000px;
+			background-color: #A9E2F3;
+		}
+		
+		.main .left{
+			width:15%;
+			height: 500px;
+			float:left;
+			color: darkblue;
+			background-color: snow;
+			
+		}
+		
+		.main .center{
+			width:80%;
+			height:900px;
+			float: right;
+			
+		}
+		.main .right{
+			width: 5%;
+			height:100px;
+			background-color: snow;
+			color: black;
+			float:left;
+		}
+		
+		
+		.menu ul{
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+			
+		}
+		.menu li{
+			width: 13%;
+			height: 40px;
+			float: left;
+			text-align: center;
+			margin: 5px;
+		}
+		.menu li a{
+			text-decoration:none;
+			display:block;
+			height:35px;
+			line-height:20px;
+			padding: 18px 50px 5px 50px;
+			border-right: 2px solid blue;
+			margin-bottom: 0px;
+		}
+		
+		img{
+			display: block;
+			margin: 10px 10px;
+			padding:10px;
+			
+		}
+		a{
+			display: block;
+			float:left;
+		}
+		
+		
+	
+		</style>
+		<head>
+		<body>
+		<div id="header">	
+		<ul>
+			<li><a>
+				<?php session_start(); ?>
+				<?php 
+				   if (isset($_SESSION['HoTenKH']) && $_SESSION['HoTenKH']){
+					   echo ''.$_SESSION['HoTenKH']."<br>";
+					  
+				   }else
+						echo' Bạn chưa đăng nhập?';
+				   ?>
+				   
+				   </a></li>
+			<li><a href="dangnhap.html">Đăng nhập</a></li>
+			<li><a href="dky.html">Đăng ký</a></li>
+			<li><a href="thoat.php">Thoát</a></li>
+		</ul>
+		</div>
+			<div class="div"><h2>WITCH STORE</h2> </div>
+			<div class="menu">
+				<p>
+				<ul style="list-style:none">
+					<li><a href ="home.html"> Trang chủ </a></li>
+					<li> <a href="" >Giới thiệu </a></li>
+					<li> <a href >Khuyến mãi </a></li>
+					<li> <a href="order.php" >Sản phẩm </a></li>
+					<li> <a href >Site map </a></li>
+					<li> <a href >Liên hệ </a></li>
+				</ul></p></span>
+				<p></p>
+			</div>
+			<div class="main">
+			
+			<div class="left">
+			<b>Danh mục sản phẩm: </b>
+			<ul>
+				<li>ĐỒNG PHỤC</li>
+				<li>CHỔI PHÉP THUẬT</li>
+				<li>SÁCH BÙA CHÚ</li>
+				<li>MŨ PHÙ THỦY</li>
+				<li>Dụng cụ Quidditch</li>
+				<li>Khác</li>
+			</ul>
+			</div>
+			<p></p>
+			<div class="center">
+				<a href="order.php"><img
+					src="trangphuc0.jpg" alt="Tron bo trang phuc" border="1px" style="width:250px;height:300px;">
+				<p>Trọn bộ đồng phục</p><p>Giá: 101.0$</p></a>
+				<a href="order.php"><img
+					src="trangphuc1.jpg" alt="Trang phuc nha giffindoor" border="1px"  style="width:250px;height:300px;">
+					<p> Đồng phục nhà Giffindoor</p><p> Giá: 58.0$</p></a>
+					<a href="order.php"><img
+					src="trangphuc2.jpg" alt="Trang phuc nha syderin" border="1px" style="width:250px;height:300px;">
+					<p> Đồng phục nhà Syderin</p><p> Giá: 98.0$</p></a>
+					<a href="order.php"><img
+					src="trangphuc.jpg" alt="Trang phuc" border="1px" style="width:250px;height:300px;">
+					<p> Đồng phục</p><p> Giá: 109.0$</p></a>
+					<a href="order.php"><img
+					src="mu.jpg" alt="Mu phu thuy" border="1px" style="width:250px;height:300px;">
+					<p> Mu phu thuy</p><p> Giá: 78.0$</p></a>
+					<a href="order.php"><img
+					src="nimbus2000.jpg" alt="Chổi" border="1px" style="width:250px;height:300px;">
+					<p> Chổi Nimbus 2000</p><p> Giá: 90.0$</p></a>
+					<a href="order.php"><img
+					src="quidditch.jpg" alt="Dụng cụ thể thao" border="1px" style="width:250px;height:300px;">
+					<p> Bộ trái Quidditch</p><p> Giá: 190.0$</p></a>
+				</div>
+				</div>
+				
+			
+			<footer>
+				<div class="container">
+					Quí Khách có bất kì thắc mắc nào về Sản Phẩm hãy liên hệ với chúng tôi @witch_store
+				</div>
+			</footer>
+			
+		</body>
+		</html>
